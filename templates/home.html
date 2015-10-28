@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h1>hello {{ user }}</h1>
+<hr>
+<p>
+  My App Custom Form
+</p>
+<form method="post" action="">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <input type="submit" value="SignUp">
+</form>
+
+{% endblock %}
