@@ -16,16 +16,17 @@
         <li><a href="{% url 'contact' %}">Contact</a></li>
       </ul>
 
+
       <ul class="nav navbar-nav navbar-right">
         {% if request.user.is_authenticated %}
-        <li><a href="{% url 'auth_logout' %}">Logout</a></li>
+        <li><a href="{# url 'auth_logout' #}">Logout</a></li>
         {% else %}
-        <li><a href="{% url 'registration_register' %}">Register</a></li>
+        <li><a href="{# url 'registration_register' #}">Register</a></li>
         {% endif %}
       </ul>
 
       {% if not request.user.is_authenticated and not "accounts/login" in request.get_full_path %}
-      <form class="navbar-form navbar-right" action="{% url 'auth_login' %}" method="POST">{% csrf_token %}
+      <form class="navbar-form navbar-right" action="{# url 'auth_login' #}" method="POST">{% csrf_token %}
         <div class="form-group">
           <input type="text" class="form-control" name="username" placeholder="Username">
         </div>

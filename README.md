@@ -6,9 +6,10 @@ DEVELOPMENT INSTALLATIONS:
 SERVER INSTALLATIONS:
 - Python 2.7
 - Django 1.8.3                'pip install Django==1.8.3'
-- Django registration redux   'pip install django-registration-redux'
+- Django AllAuth              'pip install django-allauth'
+                              reference http://django-allauth.readthedocs.org/en/latest/installation.html
 - Crispy_forms                'pip install --upgrade django-crispy-forms'
-- Social auth                 'pip install python-social-auth'
+
 
 
 PROJECT INSTALLATIONS:
@@ -22,12 +23,13 @@ TODO BEFORE PRODUCTION:
                               update ALLOWED_HOSTS
 - Email                       set valid email in settings (may require unlock captcha),
                               update activation_email.txt
+- Auth                        set consumer secret and key values for third party authentication
 - STATIC/MEDIA                set up static and media servers in settings
 - PostgreSQL                  set up database in settings
 - Sites                       update sites in admin page
 - Custom auth                 https://codingforentrepreneurs.com/projects/simple-custom-auth/,
                               https://codingforentrepreneurs.com/projects/django-allauth/,
-                              references to create custom authenthication
+                              references to create custom authentication
 - Backend                     Django query sets for views.py
 - Cleanup                     remove unnecessary debug code from head.html
 

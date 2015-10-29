@@ -20,14 +20,14 @@ from django.contrib import admin
 
 urlpatterns = [
     #MY URLs
-    url(r'^home/', 'myapp.views.home', name='home'),
-    url(r'^contact/', 'myapp.views.contact', name='contact'),
-    url(r'^about/', 'myapp.views.about', name='about'),
-    url(r'^$', 'myapp.views.home', name='home'),
+    url(r'^home/', 'basic_site.views.home', name='home'),
+    url(r'^contact/', 'basic_site.views.contact', name='contact'),
+    url(r'^about/', 'basic_site.views.about', name='about'),
+    url(r'^$', 'basic_site.views.home', name='home'),
 
     #REQUIRED URLs
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^accounts/', include('allauth.urls')),
 ]
 
 if settings.DEBUG:
